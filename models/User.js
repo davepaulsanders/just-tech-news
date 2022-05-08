@@ -43,6 +43,10 @@ User.init(
         len: [4],
       },
     },
+    // set up method to run on instance data (per user) to check password
+    checkPassword(loginPw) {
+      return bcrypt.compareSync(loginPw, this.password);
+    },
   },
 
   {
