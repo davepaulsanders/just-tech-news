@@ -12,6 +12,7 @@ module.exports = {
     return word;
   },
   format_url: (url) => {
+    console.log(url);
     return url
       .replace("http://", "")
       .replace("https://", "")
